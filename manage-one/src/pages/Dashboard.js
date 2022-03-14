@@ -57,12 +57,12 @@ function Dashboard() {
     const queryObject = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({query: "SELECT * FROM DUAL"})
+      body: JSON.stringify({query: "SELECT sysdate FROM DUAL"})
 
     }
     fetch("/execute-query", queryObject)
       .then((res) => res.json())
-      .then((data) => { console.log(data); });
+      .then((data) => { console.log(data); alert("Sysdate: "+ data.rows[0])});
   }
 
   useEffect(() => {
