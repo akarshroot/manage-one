@@ -1,0 +1,188 @@
+.dashboard-container {
+    font-family: 'Lucida Sans';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 80px;
+    background-color: whitesmoke;
+    border-top: 3px solid #0070d2;
+}
+
+.dashboard-header {
+    display: flex;
+    width: 80%;
+    height: 100px;
+    padding: 15px;
+}
+
+.dashboard-header h1 {
+    color: rgb(46, 46, 46);
+}
+
+.subtitle {
+    font-size: 15px;
+    color: gray;
+}
+
+.actions {
+    display: flex;
+    transform: translateX(100%);
+    height: calc(80px - 20px);
+    width: auto;
+    padding: 10px;
+    margin-left: 5%;
+}
+
+.actions .create-org, .connect-org {
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+    color: #0070d2;
+    font-size: 15px;
+    font-weight: 600;
+    transition-duration: 300ms;
+}
+
+.actions .connect-org:hover {
+    color: #0070d2;
+    background-color: rgb(230, 230, 230);
+}
+
+.actions .create-org {
+    background-color: #0070d2;
+    color: #fff;
+}
+
+.actions .create-org:hover {
+    color: #fff;
+    background-color: #004f94;
+}
+
+.list-orgs {
+    width: 80%;
+    height: auto;
+    min-height: calc(100vh - 100px);
+    background-color: #fff;
+    padding: 15px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.org-item {
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.org-title h3 {
+    color: rgb(46, 46, 46);
+}
+
+.org-metadata-list {
+    list-style: none;
+    font-size: 15px;
+    color: rgb(99, 99, 99);
+    font-family: 'Avanta Garde';
+}
+
+.org-metadata-list li {
+    margin: 5px;
+}
+
+.org-item .org-item-actions {
+    margin-left: 70%;
+    padding: 15px 5px;
+}
+
+.filter-button, .org-item-actions .disconnect, .launch {
+    border: 1px solid #004f94;
+    background-color: #fff;
+    color: #0070d2;
+    font-weight: bold;
+    transition-duration: 300ms;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.org-item-actions .disconnect {
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.org-item-actions .launch {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.filters .filter-button {
+    border-radius: 5px;
+    margin: 5px;
+    float: right;
+}
+
+.filters h3 {
+    position: absolute;
+}
+
+.filter-button:hover, .org-item-actions .disconnect:hover, .org-item-actions .launch:hover {
+    color: #fff;
+    background-color: #004f94;
+}
+
+.filter-button:hover + .sort-dd{
+    display: block;
+}
+
+.sort-dd {
+    list-style: none;
+    display: none;
+    z-index: 999;
+    position: absolute;
+    background-color: whitesmoke;
+    border: 1px solid #004f94;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 45px;
+    margin-left: 70%;
+    transition-duration: 300ms;
+}
+
+.sort-dd:hover {
+    display: block;
+}
+
+.sort-dd li {
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.sort-dd li:hover {
+    background-color: #fff;
+}
