@@ -22,8 +22,8 @@ app.post("/execute-query", (req, res) => {
     const { query } = req.body
     try {
         oracledb.getConnection({
-            user: 'C##test_user',
-            password: 'qwerty',
+            user: 'C##vishal',
+            password: '1234567890',
             tns: conString
         }, async function (err, con) {
             try {
